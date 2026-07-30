@@ -4,6 +4,7 @@
 
 ### 데이터에서 인사이트를 추출하고, 생성형 AI로 사용자 경험을 자동화하는 풀스택 개발자
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-tpals213.github.io-A85F26?style=flat-square&logo=googlechrome&logoColor=white)](https://tpals213.github.io/tpals213/)
 [![Email](https://img.shields.io/badge/Email-tpals213%40naver.com-2F6F6B?style=flat-square&logo=maildotru&logoColor=white)](mailto:tpals213@naver.com)
 [![GitHub](https://img.shields.io/badge/GitHub-tpals213-1C2321?style=flat-square&logo=github&logoColor=white)](https://github.com/tpals213)
 
@@ -35,7 +36,7 @@
 - 📱 **WIZ 마켓 Android 앱** — 외주 중단 상태의 WebView 하이브리드 앱을 JS↔Native 메시지 라우팅부터 재구현, 양대 스토어 정식 출시
 - 🔐 **인프라 배포/운영** — DB 외부 노출 이슈를 Docker 네트워크 분리 + 허용 IP 기반 접근 제어로 해결
 
-> 프로젝트별 문제 정의·역할·성과가 궁금하다면 포트폴리오 페이지를 확인해주세요.
+> 프로젝트별 문제 정의·역할·성과가 궁금하다면 **[포트폴리오 페이지](https://tpals213.github.io/tpals213/)** 를 확인해주세요.
 
 ## 교육
 
