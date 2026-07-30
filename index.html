@@ -421,10 +421,30 @@
     </div>
   </section>
 
-  <section class="block" id="projects">
+  <section class="block" id="other-projects">
     <div class="section-head">
       <span class="index mono">03</span>
-      <h2>주요 프로젝트 — 데이터가 앱이 되기까지</h2>
+      <h2>주)엘핀</h2>
+    </div>
+
+    <div class="stage-card">
+      <h3>Revit (구 컨셉)</h3>
+      <div class="stack-line mono">2026.07.08 ~ 2026.07.24 · 위치 기반 여행 기록 앱</div>
+      <div class="stack-line mono">React Native(Expo) · Supabase(Auth/RLS) · expo-location · expo-task-manager · expo-sqlite</div>
+      <div class="insight" style="margin-top: 16px;">
+        촬영 위치에 24시간 잠금을 걸고 반경 내 재방문 인증으로 해제하는 "재방문 잠금 타임캡슐" 컨셉을 설계·구현했습니다.
+        GPS/네트워크 이중 측위 기반 백그라운드 위치 트래킹 파이프라인과 여행 세션(시작~자동 종료·이동거리 계산) 생명주기를 직접 구축했고,
+        오프라인 상황을 고려한 위치 로그 로컬 큐잉·재전송 처리로 네트워크가 불안정한 환경에서도 데이터 유실 없이 동작하도록 안정성을 확보했습니다.
+        Supabase RLS 기반 사용자별 데이터 격리 스키마도 직접 설계했습니다.
+      </div>
+    </div>
+  </section>
+
+
+  <section class="block" id="projects">
+    <div class="section-head">
+      <span class="index mono">04</span>
+      <h2>주)제이예스 — 데이터가 앱이 되기까지</h2>
     </div>
 
     <div class="pipeline">
@@ -599,26 +619,6 @@
 
     </div>
   </section>
-
-  <section class="block" id="other-projects">
-    <div class="section-head">
-      <span class="index mono">04</span>
-      <h2>다른 프로젝트</h2>
-    </div>
-
-    <div class="stage-card">
-      <h3>Revit (구 컨셉)</h3>
-      <div class="stack-line mono">2026.07.08 ~ 2026.07.24 · 위치 기반 여행 기록 앱</div>
-      <div class="stack-line mono">React Native(Expo) · Supabase(Auth/RLS) · expo-location · expo-task-manager · expo-sqlite</div>
-      <div class="insight" style="margin-top: 16px;">
-        촬영 위치에 24시간 잠금을 걸고 반경 내 재방문 인증으로 해제하는 "재방문 잠금 타임캡슐" 컨셉을 설계·구현했습니다.
-        GPS/네트워크 이중 측위 기반 백그라운드 위치 트래킹 파이프라인과 여행 세션(시작~자동 종료·이동거리 계산) 생명주기를 직접 구축했고,
-        오프라인 상황을 고려한 위치 로그 로컬 큐잉·재전송 처리로 네트워크가 불안정한 환경에서도 데이터 유실 없이 동작하도록 안정성을 확보했습니다.
-        Supabase RLS 기반 사용자별 데이터 격리 스키마도 직접 설계했습니다.
-      </div>
-    </div>
-  </section>
-
   <footer class="block">
     <div class="thanks">Thank you</div>
     <div class="contact">
