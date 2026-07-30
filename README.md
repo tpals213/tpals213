@@ -22,10 +22,10 @@
 | 영역 | 사용 기술 |
 |---|---|
 | **Backend** | Python, FastAPI, Java (Spring Boot, JPA) |
-| **Frontend** | React (JavaScript), Canvas |
-| **Mobile** | Android (Kotlin), WebView, JavaScript Bridge |
-| **DB / Infra** | RDBMS (정규화 스키마 설계), Alibaba Cloud, Docker, HTTPS(SSL) |
-| **Etc** | 공공 API, 크롤링, OCR, 생성형 AI (GPT, Gemini, Imagen3) |
+| **Frontend** | React (JavaScript), Next.js (App Router, TypeScript), Tailwind CSS, Zustand, Canvas |
+| **Mobile** | Android (Kotlin), WebView, JavaScript Bridge, React Native (Expo Router, TypeScript) |
+| **DB / Infra** | RDBMS (정규화 스키마 설계), Supabase (PostgreSQL, RLS, 익명 인증, pg_cron), Alibaba Cloud, Docker, HTTPS(SSL) |
+| **Etc** | 공공 API, 크롤링, OCR, 생성형 AI (GPT, Gemini, Imagen3), 지도 SDK 연동, 제스처/애니메이션(Reanimated) |
 
 ## 주)엘핀
 
