@@ -1,0 +1,612 @@
+<title>장세민 — Full-Stack Developer</title>
+<meta name="description" content="데이터에서 인사이트를 추출하고, 생성형 AI로 사용자 경험을 자동화하는 풀스택 개발자 장세민의 포트폴리오" />
+<style>
+  :root {
+    --bg: #F2F4F1;
+    --surface: #FFFFFF;
+    --surface-2: #E7EBE6;
+    --ink: #1C2321;
+    --ink-soft: #4B5650;
+    --border: #D7DED4;
+    --accent: #2F6F6B;
+    --accent-ink: #FFFFFF;
+    --amber: #A85F26;
+    --good: #2F6F55;
+    --bad: #A8433A;
+    --shadow: rgba(28, 35, 33, 0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151A;
+      --surface: #171E24;
+      --surface-2: #1F2830;
+      --ink: #E8ECE9;
+      --ink-soft: #A7B0AC;
+      --border: #2A343C;
+      --accent: #5FB3AE;
+      --accent-ink: #0B1416;
+      --amber: #E2A356;
+      --good: #6FBE95;
+      --bad: #E08277;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10151A;
+    --surface: #171E24;
+    --surface-2: #1F2830;
+    --ink: #E8ECE9;
+    --ink-soft: #A7B0AC;
+    --border: #2A343C;
+    --accent: #5FB3AE;
+    --accent-ink: #0B1416;
+    --amber: #E2A356;
+    --good: #6FBE95;
+    --bad: #E08277;
+    --shadow: rgba(0, 0, 0, 0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #F2F4F1;
+    --surface: #FFFFFF;
+    --surface-2: #E7EBE6;
+    --ink: #1C2321;
+    --ink-soft: #4B5650;
+    --border: #D7DED4;
+    --accent: #2F6F6B;
+    --accent-ink: #FFFFFF;
+    --amber: #A85F26;
+    --good: #2F6F55;
+    --bad: #A8433A;
+    --shadow: rgba(28, 35, 33, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  .mono {
+    font-family: ui-monospace, "SF Mono", "JetBrains Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+  a { color: var(--accent); }
+  h1, h2, h3 { text-wrap: balance; margin: 0; }
+
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 96px 0 64px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-top: 14px;
+  }
+  .hero p.tagline {
+    max-width: 44ch;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin-top: 18px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 0.88rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .pill.accent {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: transparent;
+  }
+
+  /* ---------- Section shell ---------- */
+  section.block { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  section.block:last-of-type { border-bottom: none; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 32px; }
+  .section-head .index { font-size: 0.8rem; color: var(--ink-soft); }
+  .section-head h2 { font-size: 1.55rem; font-weight: 800; }
+
+  /* ---------- Stack ---------- */
+  .stack-row {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 18px;
+    padding: 14px 0;
+    border-top: 1px solid var(--border);
+  }
+  .stack-row:first-child { border-top: none; }
+  .stack-row .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-top: 4px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: 0.85rem;
+    padding: 5px 11px;
+    border-radius: 7px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+  }
+
+  .edu-list { margin-top: 28px; display: grid; gap: 8px; color: var(--ink-soft); font-size: 0.92rem; }
+  .edu-list li { list-style: none; }
+  .edu-list { padding: 0; }
+
+  /* ---------- Career strip ---------- */
+  .career {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .career .when { font-size: 0.85rem; color: var(--ink-soft); padding-top: 3px; }
+  .career .what strong { font-size: 1.1rem; }
+  .career .what p { color: var(--ink-soft); margin: 6px 0 0; }
+
+  /* ---------- Pipeline ---------- */
+  .pipeline { position: relative; }
+  .pipeline::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .stage { position: relative; padding: 0 0 40px 56px; }
+  .stage:last-child { padding-bottom: 0; }
+  .stage-node {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .stage-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 28px;
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  .stage-card h3 { font-size: 1.2rem; font-weight: 800; }
+  .stage-card .stack-line {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  .stage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 20px;
+  }
+  .stage-grid .col-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .stage-grid ul { margin: 0; padding-left: 18px; font-size: 0.9rem; color: var(--ink-soft); }
+  .stage-grid li + li { margin-top: 6px; }
+  .metric { color: var(--amber); font-weight: 700; }
+  .insight {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    border-left: 3px solid var(--accent);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .insight strong { color: var(--ink); }
+
+  /* diagram: android bridge */
+  .bridge {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 22px 0 16px;
+    overflow-x: auto;
+  }
+  .bridge-box {
+    flex: 1 0 150px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .bridge-box b { display: block; font-size: 0.95rem; }
+  .bridge-box span { display: block; font-size: 0.75rem; color: var(--ink-soft); margin-top: 4px; }
+  .bridge-arrow {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-width: 70px;
+  }
+  .bridge-arrow .line { color: var(--accent); font-size: 1.3rem; line-height: 1; }
+  .bridge-arrow .cap { font-size: 0.68rem; color: var(--ink-soft); margin-top: 2px; text-align: center; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
+
+  /* infra before/after */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; }
+  .compare-col h4 {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .compare-col.before h4 { color: var(--bad); }
+  .compare-col.after h4 { color: var(--good); }
+  .layer {
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  .layer.risk { border-color: var(--bad); color: var(--bad); }
+  .layer.safe { border-color: var(--good); }
+  .layer .tag-inline { color: var(--ink-soft); font-size: 0.75rem; }
+  .connector { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin: 2px 0; }
+
+  /* foundation (infra) card */
+  .foundation {
+    margin-top: 44px;
+    padding-top: 32px;
+    border-top: 2px dashed var(--border);
+    position: relative;
+  }
+  .foundation-tag {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    background: var(--bg);
+    padding-right: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  footer.block {
+    padding: 56px 0 80px;
+    text-align: center;
+  }
+  footer .thanks { font-size: 1.6rem; font-weight: 800; }
+  footer .contact { margin-top: 14px; color: var(--ink-soft); }
+
+  a:focus-visible, .pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 720px) {
+    .stage-grid { grid-template-columns: 1fr; gap: 16px; }
+    .compare { grid-template-columns: 1fr; }
+    .stack-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Full-Stack Developer</div>
+    <h1>장세민</h1>
+    <p class="tagline">데이터에서 인사이트를 추출하고, 생성형 AI로 사용자 경험을 자동화합니다. 상권 데이터 수집부터 분석·추천, 콘텐츠 자동 생성, 앱 출시까지 한 서비스의 전 과정을 직접 만들었습니다.</p>
+    <div class="hero-meta">
+      <a class="pill accent" href="mailto:tpals213@naver.com">tpals213@naver.com</a>
+      <a class="pill" href="https://github.com/tpals213" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </header>
+
+  <section class="block" id="stack">
+    <div class="section-head">
+      <span class="index mono">01</span>
+      <h2>기술 스택</h2>
+    </div>
+    <div class="stack-row">
+      <div class="label mono">Backend</div>
+      <div class="tags">
+        <span class="tag mono">Python</span>
+        <span class="tag mono">FastAPI</span>
+        <span class="tag mono">Java (Spring Boot, JPA)</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label mono">Frontend</div>
+      <div class="tags">
+        <span class="tag mono">React (JavaScript)</span>
+        <span class="tag mono">Canvas</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label mono">Mobile</div>
+      <div class="tags">
+        <span class="tag mono">Android (Kotlin)</span>
+        <span class="tag mono">WebView</span>
+        <span class="tag mono">JavaScript Bridge</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label mono">DB / Infra</div>
+      <div class="tags">
+        <span class="tag mono">RDBMS (정규화 스키마 설계)</span>
+        <span class="tag mono">Alibaba Cloud</span>
+        <span class="tag mono">Docker</span>
+        <span class="tag mono">HTTPS (SSL)</span>
+      </div>
+    </div>
+    <div class="stack-row">
+      <div class="label mono">Etc</div>
+      <div class="tags">
+        <span class="tag mono">공공 API</span>
+        <span class="tag mono">크롤링</span>
+        <span class="tag mono">OCR</span>
+        <span class="tag mono">생성형 AI (GPT · Gemini · Imagen3)</span>
+      </div>
+    </div>
+
+    <ul class="edu-list">
+      <li>2022 · 가천대학교 응용통계학과 졸업</li>
+      <li>2022 · 빅데이터 플랫폼 구축 & 파이썬 분석 전문가 양성과정 수료</li>
+      <li>2024 · JAVA 개발자 양성과정 수료 (팀 프로젝트 '아띠' 수행)</li>
+    </ul>
+  </section>
+
+  <section class="block" id="career">
+    <div class="section-head">
+      <span class="index mono">02</span>
+      <h2>경력</h2>
+    </div>
+    <div class="career">
+      <div class="when mono">2024.08 — 2025.12</div>
+      <div class="what">
+        <strong>제이예스 주식회사</strong>
+        <p>WIZ 서비스 풀스택 개발 — DB 설계 / Backend / Frontend / Android 전 영역 담당</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="projects">
+    <div class="section-head">
+      <span class="index mono">03</span>
+      <h2>주요 프로젝트 — 데이터가 앱이 되기까지</h2>
+    </div>
+
+    <div class="pipeline">
+
+      <div class="stage">
+        <div class="stage-node mono">1</div>
+        <div class="stage-card">
+          <h3>WIZ 데이터 구축</h3>
+          <div class="stack-line mono">FastAPI · RDBMS · 공공 API · 크롤링</div>
+          <div class="stage-grid">
+            <div>
+              <div class="col-label">문제</div>
+              <ul><li>출처가 다양해 형식 불일치·결측이 잦음</li><li>단순 수집이 아닌 서비스 활용을 위한 정합성 확보 필요</li></ul>
+            </div>
+            <div>
+              <div class="col-label">역할</div>
+              <ul><li>공공 API·크롤링 수집 파이프라인 구축</li><li>정규화 DB 스키마 단독 설계(테이블 관계·키 포함)</li><li>중복/결측/형식 불일치 정제 로직 구현</li></ul>
+            </div>
+            <div>
+              <div class="col-label">성과</div>
+              <ul>
+                <li>전국 행정동 <span class="metric mono">3,560개</span> 데이터 구조 표준화</li>
+                <li>분기 약 <span class="metric mono">12만 건</span> 매장 데이터 처리</li>
+                <li>인구·매출·유동인구 월 단위 데이터셋 구축</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight"><strong>인사이트 —</strong> 데이터 수집보다 정제와 구조 설계가 서비스 품질에 더 큰 영향을 준다는 걸 경험했습니다.</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-node mono">2</div>
+        <div class="stage-card">
+          <h3>WIZ-Report</h3>
+          <div class="stack-line mono">FastAPI · GPT API · React — 행정동/업종 점수화 및 추천</div>
+          <div class="stage-grid">
+            <div>
+              <div class="col-label">문제</div>
+              <ul><li>단순 점수 제공만으론 실질적 인사이트 전달이 어려움</li><li>외부 데이터 연동 시 응답 구조 불일치·예외 발생</li></ul>
+            </div>
+            <div>
+              <div class="col-label">역할</div>
+              <ul><li>행정동·업종별 입지/상권 점수 산출 로직 구현</li><li>날짜·날씨 기반 추천·솔루션 로직 개발</li><li>외부 API(관광·교통) 연동, 응답 표준화·예외 처리</li></ul>
+            </div>
+            <div>
+              <div class="col-label">성과</div>
+              <ul>
+                <li>행정동 약 <span class="metric mono">3,500개</span> 대상 점수화·추천 구축</li>
+                <li>업종 <span class="metric mono">127개</span> 소분류별 다중 지표 점수화</li>
+                <li>외부 API <span class="metric mono">3종</span> 연동·표준화로 안정성 확보</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight"><strong>인사이트 —</strong> 데이터 기반 서비스에서는 "해석(추천)"이 핵심 가치이며, 사용자 관점의 결과 설계가 중요하다는 걸 체감했습니다.</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-node mono">3</div>
+        <div class="stage-card">
+          <h3>WIZ 마켓 — SNS 콘텐츠 자동 생성</h3>
+          <div class="stack-line mono">React · FastAPI · 생성형 AI(GPT, Gemini, Imagen3) · Canvas</div>
+          <div class="stage-grid">
+            <div>
+              <div class="col-label">문제</div>
+              <ul><li>채널별 요구 포맷이 상이해 다양한 출력 필요</li><li>비전문 사용자도 쉽게 쓸 수 있는 UX 요구</li></ul>
+            </div>
+            <div>
+              <div class="col-label">역할</div>
+              <ul><li>채널별 콘텐츠 생성 흐름 설계·구현</li><li>텍스트+이미지 합성 생성 기능 개발</li><li>생성 결과 전달용 WebView 메시지 브릿지</li></ul>
+            </div>
+            <div>
+              <div class="col-label">성과</div>
+              <ul>
+                <li>"선택→생성→공유" <span class="metric mono">3단계</span> 자동화</li>
+                <li>SNS <span class="metric mono">5개+</span> 채널 대응</li>
+                <li>소분류·채널별 <span class="metric mono">30여 개</span> 포맷 자동 생성</li>
+              </ul>
+            </div>
+          </div>
+          <div class="insight"><strong>인사이트 —</strong> 소상공인이 디자인 도구 없이 3단계 클릭만으로 홍보물을 만들도록 UX를 단순화했고, 기술보다 경험의 단순화가 완성도를 좌우함을 경험했습니다.</div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-node mono">4</div>
+        <div class="stage-card">
+          <h3>WIZ 마켓 Android 앱</h3>
+          <div class="stack-line mono">Kotlin · Android · WebView · JavaScript Bridge · IAP · FCM</div>
+          <div class="stage-grid">
+            <div>
+              <div class="col-label">문제</div>
+              <ul><li>외주 개발 중단으로 코드 일관성·구조 파악이 어려운 상태</li><li>WebView-Native 간 데이터 흐름 불안정</li></ul>
+            </div>
+            <div>
+              <div class="col-label">역할</div>
+              <ul><li>JS↔Native 메시지 처리(Switch-Case 라우팅) 설계</li><li>소셜 로그인/PASS 인증, Google IAP 연동</li><li>네이티브 공유·카메라/앨범·FCM 처리</li></ul>
+            </div>
+            <div>
+              <div class="col-label">성과</div>
+              <ul>
+                <li>메시지 라우팅 정리로 통신 <span class="metric mono">안정화</span></li>
+                <li>핵심 기능 재구현으로 점진적 안정화</li>
+                <li><span class="metric mono">양대 스토어</span> 정식 출시 완료</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bridge">
+            <div class="bridge-box"><b>React Web</b><span>콘텐츠 생성 UI</span></div>
+            <div class="bridge-arrow"><span class="line">⇄</span><span class="cap mono">postMessage</span></div>
+            <div class="bridge-box"><b>WebView</b><span>하이브리드 컨테이너</span></div>
+            <div class="bridge-arrow"><span class="line">⇄</span><span class="cap mono">JS Bridge</span></div>
+            <div class="bridge-box"><b>Android Native</b><span>Kotlin · Switch-Case 라우팅</span></div>
+          </div>
+          <div class="chips">
+            <span class="chip mono">인앱결제(IAP)</span>
+            <span class="chip mono">푸시 알림(FCM)</span>
+            <span class="chip mono">카메라/파일 업로드</span>
+            <span class="chip mono">네이티브 공유·소셜 로그인</span>
+          </div>
+
+          <div class="insight"><strong>인사이트 —</strong> 레거시 환경에서는 구조 파악 → 안정화 → 개선 순서가 중요하며, 신규 개발보다 기존 시스템 이해가 더 중요할 수 있음을 체감했습니다.</div>
+        </div>
+      </div>
+
+      <div class="foundation">
+        <span class="foundation-tag mono">기반 시스템 — 위 4단계 전체를 떠받침</span>
+        <div class="stage" style="padding-left: 0;">
+          <div class="stage-card">
+            <h3>인프라 배포 / 운영</h3>
+            <div class="stack-line mono">Alibaba Cloud · Docker · HTTPS(SSL)</div>
+            <div class="stage-grid" style="grid-template-columns: 1fr 1fr;">
+              <div>
+                <div class="col-label">문제</div>
+                <ul><li>테스트 운영 환경의 접근 제어 미흡으로 DB가 외부에 노출되는 보안 이슈 발생</li></ul>
+              </div>
+              <div>
+                <div class="col-label">역할 · 성과</div>
+                <ul>
+                  <li>DB 외부 접근 차단, 내부망/허용 IP 기반 접근 제어 적용</li>
+                  <li>인증 정보·환경 변수 분리 관리</li>
+                  <li>Docker 서비스별 네트워크 분리 · 접근 범위 최소화</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="compare">
+              <div class="compare-col before">
+                <h4 class="mono">Before</h4>
+                <div class="layer">Internet</div>
+                <div class="connector">↓</div>
+                <div class="layer risk">DB Server <span class="tag-inline">— 외부 직접 접근 가능</span></div>
+              </div>
+              <div class="compare-col after">
+                <h4 class="mono">After</h4>
+                <div class="layer">Internet</div>
+                <div class="connector">↓</div>
+                <div class="layer safe">Nginx / API Server <span class="tag-inline">HTTPS(SSL)</span></div>
+                <div class="connector">↓</div>
+                <div class="layer safe">Backend (Docker) <span class="tag-inline">네트워크 분리</span></div>
+                <div class="connector">↓</div>
+                <div class="layer safe">DB <span class="tag-inline">Private Network · 허용 IP만</span></div>
+              </div>
+            </div>
+
+            <div class="insight"><strong>인사이트 —</strong> 운영 환경 보안 설정은 서비스 안정성에 직접 영향을 미치며, 초기 단계부터 접근 제어를 선제적으로 적용하는 게 중요함을 체감했습니다.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="block">
+    <div class="thanks">Thank you</div>
+    <div class="contact">
+      <a href="mailto:tpals213@naver.com">tpals213@naver.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/tpals213" target="_blank" rel="noopener">github.com/tpals213</a>
+    </div>
+  </footer>
+
+</div>
