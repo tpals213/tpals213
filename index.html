@@ -442,6 +442,18 @@
     </div>
 
     <div class="stage-card">
+      <h3>crawlingbot</h3>
+      <div class="stack-line mono">2026.09~2026.10 · 커뮤니티 유해 게시물 모더레이션 봇</div>
+      <div class="stack-line mono">Python · Django · PostgreSQL(Supabase) · Playwright(+stealth) · curl_cffi · lxml · Ollama(qwen3:4b) · transformers · PyTorch · Tesseract OCR · trafilatura</div>
+      <div class="insight" style="margin-top: 16px;">
+        커뮤니티 게시물을 크롤링·파싱해 유해 게시물을 자동 분류하고, 관리자가 검수하는 웹까지 연결한 모더레이션 봇입니다.
+        3개 사이트를 대상으로 LLM(qwen3:4b)이 글마다 직접 파싱하는 운영 파이프라인을 구축해 325개 글을 실패 없이 처리했고,
+        파싱 모델 4종을 어절 단위로 채점하는 비교 체계를 설계해 본문 일치율 91% 모델을 선정했습니다.
+        안티봇 우회 크롤러와 렌더링·더보기 반복 클릭·페이지네이션 기반 댓글 전체 수집, 유해 분류(kanana-safeguard·kor_unsmile) 결과의 DB 저장과 Django 검수 웹 연동을 구현했습니다.
+      </div>
+    </div>
+
+    <div class="stage-card">
       <h3>Zari</h3>
       <div class="stack-line mono">2026.07~2026.08 · 위치 기반 SNS</div>
       <div class="stack-line mono">React Native(Expo) · TypeScript · Supabase(Postgres/Storage/Edge Functions) · 네이버 지도 SDK · react-native-reanimated</div>
